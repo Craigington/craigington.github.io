@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Craig Wentka</title>
+    <link rel="stylesheet" href="about me.css">
+    <script src="https://kit.fontawesome.com/5f0f732c1f.js" crossorigin="anonymous"></script> <!--script that impliments fontawesome icons-->
+    
+    
+    <h1 class="sub-title"><span>About Me</span></h1> <!--imports about me text-->
+    
+    <div class="about-col-1">
+        <div class="about-hero"><img src="Craig-about-me-page.jpg.png" height="600px"> <!--imports user image--></div>
+    <div class="about-hero"><p class="caption">Self-starter, eager to learn with a good attitude. I love learning new things to keep myself busy. Currently working for Hubbell Electric as an Associate Design Engineer. In the meantime I decided to learn how to make a website, so here we are. Getting my name out there as a Designer. I believe the only limits are the ones we place on ourselves of course, but learning can push the limit of what we can imagine possible.</p> <!--text explaining who I am--></div>
+    </div>
+    
+</head>
+
+<body>
+    <div id="about"> <!--building the "about" section through divs-->
+                <!--place how could you tell here to put it back beside the about me text-->
+                <div class="about-col-2">
+                
+                    
+
+                    <div class="tab-titles"> <!--sets up the about me tab links and makes it so when you click them, they open up to the following content listed for each tab [CALLED UPON IN JAVASCRIPT BELOW]-->
+                        <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
+                        <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
+                        <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills"> <!--filling in the content of the 'skills' about me tab. Adding ID so the code recognises the info in this section as 'skills'-->
+                        <ul class="skills-content">
+                            <li><span>Visual Artist</span><br> Specializing in digital, ink, and spraypaint mediums</li>
+                            <li><span>Manufacturing</span><br>CNC, Waterjet, Standard shop power and hand tools</li>
+                            <li><span>Software</span><br>Inventor, SolidWorks, AutoCAD, Adobe Photoshop, Adobe Premiere Pro, Adobe After Effects</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience"> <!--filling in the content of the 'experience' about me tab. Adding ID so the code recognises the info in this section as 'experience'-->
+                        <ul class="experience-content">
+                            <li><span>Associate Design Engineer</span><br>For Hubbell Electric. Jan 2024-Present</li>
+                            <li><span>Engineering Research Assistant</span><br>Tensile tested lab samples of aluminum and steel using Instron machine</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education"> <!--filling in the content of 'education' about me tab. Adding ID so the code recognises the info in this section as 'education'-->
+                        <ul class="education-content">
+                            <li><span>BOS in Mechanical Engineering Technology</span><br> SUNY Polytechnic Institute</li>
+                            <li><span>FE Exam IN PROGRESS</span><br>Currently preparing for FE exam to further expand my knowledge</li>
+                            <li><span>Self-Taught Artist</span><br>Primary Focus on visual art</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+           
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+    </script>
+
+</body>

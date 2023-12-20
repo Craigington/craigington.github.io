@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craig Wentka's Artist Portfolio</title>
+    <link rel="stylesheet" href="portfolio 2 css.css">
+    <script src="https://kit.fontawesome.com/5f0f732c1f.js" crossorigin="anonymous"></script> <!--script that impliments fontawesome icons-->
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav> <!--navigation links are below along with the logo in an unlabled list! in the href we put the # for what these links go to within the code. -->
+                <img src="logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="about me.html">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i> <!--x icon to close out this jazz. onclick option closes menu[CALLED UPON IN JAVASCRIPT AT BOTTOM]-->
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i> <!--bars icon for side bar navigation. onclick function opens the menu [CALLED UPON IN JAVASCRIPT]-->
+            </nav>
+            <div class="header-text">
+                <p>Engineer/Designer/Artist</p>
+                <h1>Hi, I'm <span>Craig</span></h1>
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!-------------------------about section-[now placeholder]------------------------->
+
+
+
+   
+    <!----------------------services----------------->
+    
+    
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-tablet"></i> <!--adds fontawesome tablet icon-->
+                    <h2>Digital</h2>
+                    <p> Digital art made with Photoshop</p>
+                    <a href="digital-traditional-comm-prices.png">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-spray-can"></i> <!--adds fontawesome spraycan icon-->
+                    <h2>Murals</h2>
+                    <p> Painted with spray and regular paint</p>
+                    <a href="mural-comm-prices.png">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen"></i> <!--adds fontawesome pen icon-->
+                    <h2>INK</h2>
+                    <p> Drawings in pen & ink</p>
+                    <a href="digital-traditional-comm-prices.png">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------PORTFOLIO------------------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="shoeb goldberg portfolio image.png">
+                    <div class="layer">
+                        <h3>"The Shoeb Goldberg"</h3>
+                        <p>Senior Thesis Project</p>
+                        <a href="Gadgets learn more section.html"><i class="fa-solid fa-link"></i></a> <!--makes an icon from fontawesome and turns into link-->
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="digital Portfolio image.png">
+                    <div class="layer">
+                        <h3>Digital/Traditional Works</h3>
+                        <p>Most of my stuff here</p>
+                        <a href="Digital-Traditional-portfolio.html"><i class="fa-solid fa-link"></i></a> <!--makes an icon from fontawesome and turns into link-->
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="murals image.png">
+                    <div class="layer">
+                        <h3>Murals</h3>
+                        <p>On Abandoned Places</p>
+                        <a href="murals-portfolio-section.html"><i class="fa-solid fa-link"></i></a> <!--makes an icon from fontawesome and turns into link-->
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a> <!--see more button under works images-->
+        </div>
+    </div>
+
+
+    <!----------------------------------CONTACT SECTION------------------------------->
+    
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p class="contact-text"><i class="fa-solid fa-paper-plane"></i>craig.wentka@gmail.com</p>
+                    <p class="contact-text"><i class="fa-solid fa-phone"></i>631-793-4688</p>
+                    <div class="social-icons"> <!--linking all of my social media below in the following 'a' tags-->
+                        <a href="https://www.instagram.com/craig.wentka/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/Codeine_Craig" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.linkedin.com/in/craig-wentka-22aab4236/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.artstation.com/code_craig" target="_blank"><i class="fa-brands fa-artstation"></i></a>
+                    </div>
+                    <a href="Craig-Wentka-Website-Resume.pdf" download class="btn btn2">Download Resume</a> <!--downloads attached file with the download CV button-->
+                </div>
+                <div class="contact-right"> <!--constructing the form for contact purposes-->
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg">hello</span> <!--confirmation message on contact form, displayed only when the message is submitted-->
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Craig. Made by me, motherfucker</p> <!--copyright message, not sure what the legality is here brush up on this before publishing-->
+        </div>
+    </div>
+
+    <!--basically below is javascript that makes it so when you click in the tabs for the 'about me' section, the correct info pops up for the correct tab, while also removing the previously clicked tabs information
+        it does this through a series of a few for loops that calls upon the names/prefixes of each section that is written out above-->
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+    </script>
+
+<!--script to open and close side menu below-->
+
+    <script>
+
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+    <!--the script below takes the message from the contact me section and adds it to a google sheet. then it resets the form and leaves a message that dissapears after five seconds confirming it was sent-->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxZhZt9k7118IzTXBsm9W4f5r4a7G6wpKY4Z2JMH6Wl91WnW-Waryv-ZXq9K_teqg3ktw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
+

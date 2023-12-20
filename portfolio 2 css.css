@@ -1,0 +1,430 @@
+
+@font-face{
+    font-family: myfont; /*GET DOPE FONTS FROM DAFONT.COM*/
+    src: url(Molot.otf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: myfont;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth; /*adds scroll when you click on main nav links*/
+}
+body{
+    background: rgb(0, 0, 0)
+}
+#header{ /*setting the dimentions and tolerances for the background image (which is also just added in this block)*/
+    width: 100%;
+    height: 100vh;
+    background-image: url(demon\ mechs.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.container{ /* spaces the logo and nav links away from the edges of the window */
+    padding: 10px 10%;
+
+}
+
+nav{ /* flex makes the logo and nav links side by side. this also orients the menu links and logo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{ /* establishes the width for the logo */
+    width: 140px;
+}
+
+nav ul li{ /* horizontally aligns nav links and adds margin between links */
+    display:inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{ /* makes the nav links white, and removes the underline with text decoration, changes font size*/
+    color: #fffb00; /*this comment is in CSS*/
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+
+}
+
+nav ul li a::after{ /* adds underline to nav links, adjusts their color and distances*/
+    content: '';
+    width: 0;
+    height: 40px;
+    background: rgb(238, 255, 0);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    opacity: .3;
+    border-radius: 50% 100%;
+
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{ /*sets margin for header text "job title"*/
+    margin-top: 50%;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.header-text h1{ /*sets margin and size of text for main header (biggest text)*/
+    font-size: 60px;
+    margin: 10px;
+    color: white;
+}
+
+.header-text h1 span{ /*sets the color for the emphasized word in the biggest text (craig)*/
+    color: red;
+    text-shadow: -9px 2px 0px rgb(214, 210, 0);
+}
+
+/*------------------------------ABOUT SECTION [now placeholder]-----------------------------*/
+
+
+
+/*------------------SERVICES CODE--------------------*/
+
+#services{
+    padding: 125px 0;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px; /*distance between services panels*/
+    margin-top: 50px;
+}
+
+.services-list div{ /*Addds boxes around the "my services" items and dimentions and colors them*/
+    background: #000000;
+    padding: 60px; /*adjusts box size*/
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 70px;
+    transition: background 0.5s, transoform 1s;
+    transform: rotate(-18deg);
+    
+}
+
+.services-list div i{ /* edits the dimentions and spacing of the icons for the "my servies" section*/
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2{ /* changes the heading of each of the individual services eg. "digital, murals, pen&ink"*/
+    font-size: 65px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: red;
+    text-shadow: -9px 2px 0px rgb(214, 210, 0);
+}
+
+.services-list div a{ /*changes the properties of 'learn more' links*/
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover{ /*adds a hover effect to the services panels, moves them a little over 0.5s*/
+    background: #d0ff00;
+    transform: translate(-10px);
+    transition: transform 0.5s;
+}
+
+/*------------------------------PORTFOLIO SECTION---------------------------------*/
+
+#portfolio{
+    padding: 0px 0;
+}
+
+.sub-title { /*CSS TO EDIT ALL OF THE SUB TITLES (services, portfolio, contact*/
+    transform: rotate(-18deg);
+    transform-origin: 0 0;
+    position: absolute;
+    left: 30px;
+    font-size: 70px;
+    background-color: aliceblue;
+    background-position: 30px;
+    border-radius: 50% 100%;
+    text-shadow: -9px 2px 0px rgb(214, 210, 0);
+    color: rgb(158, 1, 1);
+    
+}
+
+.work-list{ /* formats the images to be in the correct positions*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+    margin-top: 0px;
+    
+}
+
+.work{ /*further formatting the images editing their fillet and position*/
+    border-radius: 50% 100%;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.work img{ /*further formatting the images*/
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.layer{ /*Adds a box, gradient, and border fillet around each of the listed works. then it sets the position
+    of the text, moves the gradient on top of the image and makes sure everything is aligned*/
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ffd900);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.layer h3{ /* adjusts font weight and margin of title of listed works*/
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.layer a{ /*adds fancy circle around link icon below work quick description*/
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{ /*transform time and scale for hover effect over works images*/
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    
+    
+}
+
+.work:hover .layer{ /* adds hover effect on portfolio images*/
+    height: 100%;
+    transition: height 0.5s;
+    border-radius: 50% 100%;
+    transition: transform 0.5s;
+    transform: rotate(360deg);
+    
+
+}
+
+.btn{ /*see more button design*/
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover{ /*hover effects on see more button*/
+    background: #f80a0a;
+    transition: background 0.5s;
+}
+
+/*-----------------------CONTACT ME SECTION-----------------------*/
+
+#contact{
+    margin-bottom: 50px;
+}
+
+.contact-left{ /*orienting both the right and the left sections for the contact me portion*/
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{ /*orienting icons for email and phone*/
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{ /*editing all social icons margin from other info*/
+    margin-top: 30px;
+}
+
+.social-icons a{ /*editing the social icons*/
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ff004f;
+    display: inline-block;
+}
+
+.social-icons a:hover{ /*adding hover effect to social media icons*/
+    color: #fffb00;
+    transform: translateY(-5px);
+    transform: rotate(20deg);
+    transition: transform 0.5s;
+}
+
+.contact-text{ /*email and phone text color*/
+    color: #00ff22;
+    display: inline-block;
+    
+    
+}
+
+.btn.btn2{ /*changes display for download button and color*/
+    display: inline-block;
+    color: #ff004f;
+}
+
+.contact-right form{ /*overall dimentioning of the right contact form*/
+    width: 100%;
+}
+
+form input, form textarea{ /*formatting the whole text input areas*/
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: c#4e0909;
+    padding: 15px;
+    margin: 15px 0;
+    color: #2e0505;
+    border-radius: 6px;
+}
+
+form btn2{ /*formatting submit button*/
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: white;
+    font-weight: 300px;
+    margin-top: 20px;
+}
+
+/*----------------------------------CSS FOR SMALL SCREEN-----------------------------------*/
+
+nav .fa-solid{ /*makes it so the x and three bars icon is hidden in full size website*/
+    display: none; 
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(phone-background.png);
+    }
+
+    .header-text{ /*alters the size of the header text for mobile devices*/
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+    }
+
+    nav .fa-solid{ /*makes it so the x and three bars icon is visible in mobile*/
+        display: block;
+        font-size: 25px;
+        color: #00ff22;
+    }
+
+    nav ul{ /*positioning the navigation menu in mobile. smooths transition when clicking*/
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{ /*positioning bars icon fa-solid calls upon the icon listed in the intro section of html code*/
+        position: absolute;
+        top: 25px;
+        left: 25;
+        cursor: pointer;
+    }
+/*resizing about me section for mobile*/
+    
+    .sub-title{ /*resizes the "about me" header*/
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2{ /*makes about me image take up the correct amount of space*/
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 30px; /*margin for bottom of said image*/
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right{ /*adjusts the contact info text box sizes*/
+        flex-basis: 100%;
+    }
+
+    .copyright{
+        font-size: 14px;
+    }
+
+}
+
+#msg{
+    color: #00ff22;
+    margin-top: -40px;
+    display: block;
+}

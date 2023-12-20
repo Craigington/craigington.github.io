@@ -1,0 +1,129 @@
+#about{ /*orienting the about text*/
+    padding: 40px;
+    color: #ffffff;
+    text-align: center;
+}
+
+body{
+    background: linear-gradient(
+        to bottom,
+        rgb(0, 0, 0),
+        rgb(0, 0, 0)
+    );
+    background-attachment: fixed; /*makes gradient background take up whole page*/
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center; /*this is where i can align the about me text (does this do anythign?>?*/
+}
+
+@font-face{
+    font-family: myFont;
+    src: url(Arista-Pro-Alternate-Fat-trial.ttf);
+}
+
+h1{
+    font-family: myFont;
+}
+
+.about-col-1{ /*setting the width of the columns*/
+    flex-basis: 100%;
+}
+
+
+
+.about-col-1 img{ /*setting width and filleting the edges of the about picture*/
+    width: 50%;
+    border-radius: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{ /*the about me header*/
+    font-size: 100px;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+}
+
+.sub-title span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe600;
+    border-radius: 50% 5000%;
+    margin: 20px 20px 0 0;
+    height: 100px;
+    opacity: .8;
+}
+
+.caption{ /*this is the caption for the about me, a brief intro to what im all about*/
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 30px;
+    background-color: #fffb00;
+    opacity: .8;
+    font-family: myFont;
+}
+
+.tab-titles{ /*adjusts tab titles margins*/
+    display: flex;
+    margin: 20px 0px 40px;
+    justify-content: center;
+    font-family: myFont;
+}
+
+.tab-links{ /* adjusts position and text properties of about me links*/
+    margin-right: 50px;
+    font-size: 100px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{ /*properties of tablinks highlight*/
+    content: '';
+    width: 0;
+    height: 130px;
+    background: #fffb00;
+    position: absolute;
+    left: 0px;
+    bottom: -8px;
+    transition: .5s ease-in-out;
+    opacity: 0.3;
+    border-radius: 50% 500%;
+}
+
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+.tab-contents ul li{ /* tab contents shit */
+    list-style: none;
+    margin: 20px 0;
+    font-family: myFont;
+}
+
+.tab-contents ul li span{ /* font and size of each of the main skills' text*/
+    color: #ffe600;
+    font-size: 30px;
+}
+
+.tab-contents{ /*makes it so the about me tabs arnt showing all the time*/
+    display: none;
+    font-size: 20px;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
